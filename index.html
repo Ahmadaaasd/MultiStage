@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="allContanier">
+    <header>
+      <div class="stepContanier">
+        <div class="numIcon1" id="numIcon1">1</div>
+        <div class="stepDetalies">
+          <div class="step">STEP 1</div>
+          <div class="details">YOUR INFO</div>
+        </div>
+      </div>
+      <div class="stepContanier">
+        <div class="numIcon2" id="numIcon2">2</div>
+        <div class="stepDetalies">
+          <div class="step">STEP 2</div>
+          <div class="details">SELECT PLAN</div>
+        </div>
+      </div>
+      <div class="stepContanier">
+        <div class="numIcon3" id="numIcon3">3</div>
+        <div class="stepDetalies">
+          <div class="step">STEP 3</div>
+          <div class="details">ADD-ONS</div>
+        </div>
+      </div>
+      <div class="stepContanier">
+        <div class="numIcon4" id="numIcon4">4</div>
+        <div class="stepDetalies">
+          <div class="step">STEP 4</div>
+          <div class="details">SUMMARY</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="step1 stp">
+        <p class="personalInfo">Personal info</p>
+        <p class="providing">Please provide your name, email address, and phone number.</p>
+        <form>
+          <div class="erorrContanier">
+            <div class="nameEmailPhone">Name</div>
+            <div id="error1" class="error1"></div>
+          </div>
+          <input class="input" id="input1" type="text" placeholder="e.g. Ahmad Yacoub">
+          <div class="erorrContanier">
+            <div class="nameEmailPhone">Email Address</div>
+            <div id="error2" class="error2"></div>
+          </div>
+          <input class="input" id="input2" type="text" placeholder="e.g. ahmadkjs@gmail.com">
+          <div class="erorrContanier">
+          <div class="nameEmailPhone">Phone Number</div>
+            <div id="error3" class="error3"></div>
+          </div>
+          <input class="input" id="input3" type="text" placeholder="e.g. +962797261190">
+        </form>
+        <button class="nextStep nextStep1">Next Step</button>
+      </div>
+      <div class="step2 stp">
+        <p class="personalInfo">Select your plan</p>
+        <p class="providing">you have the option of monthly or yearly billing.</p>
+        <form class="arcadeContanier">
+          <div class="arcade fake1" id="arcade1">
+            <img class="img" src="assets/images/icon-arcade.svg">
+            <p class="advanced">Arcade</p>
+            <p class="payment payment1">$9/mo</p>
+          </div>
+          <div class="arcade fake2" id="arcade2">
+            <img class="img" src="assets/images/icon-advanced.svg">
+            <p class="advanced">Advanced</p>
+            <p class="payment payment2">$12/mo</p>
+          </div>
+          <div class="arcade fake3" id="arcade3">
+            <img class="img" src="assets/images/icon-pro.svg">
+            <p class="advanced">pro</p>
+            <p class="payment payment3">$15/mo</p>
+          </div>
+        </form>
+        <div class="monthYear">
+          <p class="date">Monthly</p>
+          <label class="THEME" id="THEME">
+            <input type="checkbox" class="checkbox" hidden  name="checkbox" id="checkbox">
+            <span class="check" id="check"></span>
+          </label>
+          <p class="date">Yearly</p>
+        </div>
+        <button class="goBack">Go Back</button>
+        <button  class="nextStep nextStep2">Next Step</button>
+      </div>
+      <div class="step3 stp">
+        <p class="personalInfo">Pick add-ons</p>
+        <p class="providing">Add-ons help enhance your gaming experience</p>
+        <form>
+          <div class="checkboxContanier">
+          <label class="buttonContanier but1">
+            <input type="checkbox" class="buttonCheck1" hidden >
+            <div class="checkMarkCont" id="checkMarkCont1">
+              <img class="checkMark" src="assets/images/icon-checkmark.svg">
+          </div>
+            <div class="onlineServiceContanier">
+              <p class="onlineService">Online service</p>
+              <p class="access">Access to multiplayer games</p>
+            </div>
+            <div class="amount page3Amount">+$1/mo</div>
+          </label>
+          <label class="buttonContanier but2">
+          <input type="checkbox" class="buttonCheck2" hidden>
+            <div class="checkMarkCont" id="checkMarkCont2">
+              <img class="checkMark1" src="assets/images/icon-checkmark.svg">
+            </div>
+            <div class="onlineServiceContanier1">
+              <p class="onlineService1">Larger storage</p>
+              <p class="access1">Extra 1TB of cloud save</p>
+            </div>
+            <div class="amount1 page3Amount1">+$2/mo</div>
+          </label>
+          <label class="buttonContanier but3">
+          <input type="checkbox" class="buttonCheck3" hidden>
+          <div class="checkMarkCont" id="checkMarkCont3">
+            <img class="checkMark" src="assets/images/icon-checkmark.svg">
+          </div>
+            <div class="onlineServiceContanier">
+              <p class="onlineService">Customizable profile</p>
+              <p class="access">Custom theme on your profile</p>
+            </div>
+            <div class="amount page3Amount2">+$2/mo</div>
+          </label>
+          </div>
+        </form>
+        <button class="goBack">Go Back</button>
+        <button class="nextStep nextStep3 nextStepTotal">Next Step</button>
+      </div>
+      <div class="step4 stp">
+        <p class="personalInfo">Finishing up</p>
+        <p class="providing">Double-check everything looks OK before confirming.</p>
+        <div class="page4Contanier">
+          <div class="changeContainer">
+            <div class="arcadeChange">
+              <p class="Arcade"><span class="page4Arcade fakeArcade" id="page4Arcade">Arcade</span>(<span class="page4MY">Monthly</span>)</p>
+            </div>
+            <div class="paymentPage4 fake" id="fake">$9/mo</div>
+          </div>
+          <div class = "line"></div>
+          <div class="changeContainer changeContainer1">
+            <p class="onlineServicePage4">Online service</p>
+            <p class="amountPage4">+$1/mo</p>
+          </div>
+          <div class="changeContainer changeContainer2">
+            <p class="onlineServicePage4">Larger storage</p>
+            <p class="amountPage4 amount1Page4">+$2/mo</p>
+          </div>
+          <div class="changeContainer changeContainer3">
+            <p class="onlineServicePage4">Customizable profile</p>
+            <p class="amountPage4 amount2Page4">+$2/mo</p>
+          </div>
+        </div>
+        <div class="totalContanier">
+          <p class="onlineServicePage4"><span class="perMY"></span></p>
+          <p class="totalPayment"></p>
+        </div>
+        <button class="goBack">Go Back</button>
+        <button class="confirm nextStep">Confirm</button> 
+      </div>
+      <div class="step5 stp">
+        <div class="fifthpage">
+          <img class="thankImg" src="assets/images/icon-thank-you.svg">
+          <p class="thankyou">Thank you!</p>
+          <p class="fifthParagraph">Thanks for confirming subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
